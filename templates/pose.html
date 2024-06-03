@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .pose-container {
+            background: linear-gradient(100deg, #0066ff, #00bfff);
+            min-width: 100vw;
+            min-height: 100vh;
+        }
+
+        select {
+            /* styling */
+            background-color: white;
+            border: thin solid blue;
+            border-radius: 4px;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            margin-top: 30px;
+            /* reset */
+            width: 300px;
+            /* height: 50px; */
+            /* margin: 0; */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+
+        /* arrows */
+
+        select.classic {
+            background-image:
+                linear-gradient(45deg, transparent 50%, rgb(210, 210, 250) 50%),
+                linear-gradient(135deg, rgb(232, 232, 239) 50%, transparent 50%),
+                linear-gradient(to right, rgb(26, 64, 249), rgb(4, 0, 253));
+            background-position:
+                calc(100% - 20px) calc(1em + 2px),
+                calc(100% - 15px) calc(1em + 2px),
+                100% 0;
+            background-size:
+                5px 5px,
+                5px 5px,
+                2.5em 2.5em;
+            background-repeat: no-repeat;
+        }
+
+        select.classic:focus {
+            background-image:
+                linear-gradient(45deg, white 50%, transparent 50%),
+                linear-gradient(135deg, transparent 50%, white 50%),
+                linear-gradient(to right, rgb(26, 64, 249), rgb(4, 0, 253));
+            background-position:
+                calc(100% - 15px) 1em,
+                calc(100% - 20px) 1em,
+                100% 0;
+            background-size:
+                5px 5px,
+                5px 5px,
+                2.5em 2.5em;
+            background-repeat: no-repeat;
+            border-color: grey;
+            outline: 0;
+        }
+
+        .pose-details {
+            display: flex;
+            /* justify-items: ; */
+            justify-content: space-around;
+        }
+
+        .pose-img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .instructionsList {
+            width: 40%;
+            border-radius: 8px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .instructionsList li {
+            margin: 10px;
+            letter-spacing: 0.5px;
+            color: white;
+            font-weight: 400;
+            margin-top: 20px;
+        }
+
+        .instructions-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+        }
+
+        .pose-demo-img {
+            height: 400px;
+            aspect-ratio: 1;
+            border-radius: 15px;
+        }
+
+        .secondary-btn {
+            position: relative;
+            left: 45%;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            border-color: rgba(125, 125, 125, 0.1);
+            border-width: 5px;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 0px 0px;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .back-btn {
+            position: relative;
+            left: 80%;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            border-color: rgba(125, 125, 125, 0.1);
+            border-width: 5px;
+            /* width: 200px; */
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 0px 0px;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="pose-container">
+        <a href="/"><button class="back-btn">Back</button></a>
+        <center>
+            <form action="/selected_pose" method="post">
+                <select class="classic" name="selected_pose" name="selected_pose" id="selectedPose">
+                    <option value="Tree Pose">Tree Pose</option>
+                    <option value="Triangle Pose">Triangle Pose</option>
+                    <option value="DownDog Pose">DownDog Pose</option>
+                    <option value="Chair Pose">Chair Pose</option>
+                    <option value="Shoulder Pose">Shoulder Pose</option>
+                    <option value="Warrior Pose">Warrior Pose</option>
+                </select>
+        </center>
+        
+        <br>
+        <div class="instructions-container">
+            <ul class="instructionsList">
+                <li id="instruction1">Start in Mountain Pose (Tadasana), standing tall with your feet hip-width apart
+                    and your arms relaxed by your sides</li>
+                <li id="instruction2">
+                    Shift your weight onto your left foot and lift your right foot off the ground, bending your right
+                    knee
+                </li>
+                <li id="instruction3">
+                    Place the sole of your right foot either above or below your left knee, avoiding direct pressure on
+                    the knee joint. You can place it on your inner left thigh for a deeper stretch or on your calf for
+                    more stability.
+                </li>
+                <li id="instruction4">
+                    Bring your hands together in front of your chest in a prayer position, or extend your arms overhead,
+                    reaching toward the sky. Find a focal point to gaze at to help maintain your balance. Hold the pose
+                    for a few breaths, then switch sides and repeat. Remember to breathe deeply throughout the pose to
+                    enhance your focus and stability.
+                </li>
+
+            </ul>
+            <img id="pose-demo-img" class="pose-demo-img" src="../static/tree.jpg" alt="Pose Image" />
+        </div>
+            
+            <button type="submit" class="secondary-btn">Start Pose</button>
+        </form>
+
+
+    </div>
+    <script>
+        const instructions = {
+            "Tree Pose": [
+                "Start in Mountain Pose (Tadasana), standing tall with your feet hip-width apart and your arms relaxed by your sides",
+                "Shift your weight onto your left foot and lift your right foot off the ground, bending your right knee",
+                "Place the sole of your right foot either above or below your left knee, avoiding direct pressure on the knee joint. You can place it on your inner left thigh for a deeper stretch or on your calf for more stability. ",
+                "Bring your hands together in front of your chest in a prayer position, or extend your arms overhead, reaching toward the sky. Find a focal point to gaze at to help maintain your balance. Hold the pose for a few breaths, then switch sides and repeat. Remember to breathe deeply throughout the pose to enhance your focus and stability."
+            ],
+            "Triangle Pose": [
+                // Instructions for Triangle Pose
+                "Begin in a standing position at the top of your mat with your feet about 3 to 4 feet apart, parallel to each other.",
+                "Extend your arms out to the sides, parallel to the ground, with palms facing down.",
+                "Shift your left foot slightly to the right and pivot your right foot 90 degrees to the right, aligning your right heel with the arch of your left foot.",
+                "Exhale as you reach your right hand down towards your right shin, ankle, or the floor while simultaneously lifting your left arm straight up towards the ceiling, creating a straight line from your left hand to your left foot. Keep your chest and hips open towards the long edge of the mat. Hold the pose for a few breaths, then switch sides and repeat. Remember to keep your body aligned and avoid collapsing into the pose."
+            ],
+            "DownDog Pose": [
+                // Instructions for DownDog Pose
+                "Begin by standing tall with your feet together, arms by your sides, and weight evenly distributed between both feet.",
+                "Inhale as you raise your arms overhead, parallel to each other, with palms facing each other or touching.",
+                "Exhale as you bend your knees and lower your hips down as if you were sitting into an imaginary chair. Keep your knees in line with your ankles, and your thighs as parallel to the ground as possible.",
+                "Engage your core muscles to maintain stability and lengthen through your spine. Gaze forward or slightly upward, and hold the pose for several breaths. To deepen the stretch, you can sink lower into the pose, but be mindful of keeping your knees behind your toes. When you're ready to release, inhale and straighten your legs to return to a standing position."
+            ],
+            "Chair Pose": [
+                // Instructions for Chair Pose
+                'Stand straight and tall with your feet slightly wider than hip­-width apart and your arms at your sides.',
+                'Inhale and lift your arms next to your ears, stretching them straight and parallel with wrists and fingers long. Keep your shoulders down and spine neutral.',
+                'Exhale as you bend your knees, keeping your thighs and knees parallel. Lean your torso forward to create a right angle with the tops of your thighs. Keep your neck and head in line with your torso and arms. Hold for 30 seconds to 1 minute.',
+                'Source: classpass - https://classpass.com/movements/chair-pose'
+            ],
+            "Shoulder Pose": [
+                // Instructions for Shoulder Pose
+                "Begin by lying flat on your back with your arms alongside your body and your palms facing down.",
+                "Inhale deeply as you lift your legs off the ground, keeping them straight, and use your hands to support your lower back as you lift your hips off the ground.",
+                "Continue to raise your legs and hips until your torso is perpendicular to the floor, and your weight is supported on your shoulders and upper arms. Keep your elbows close to your body and your hands supporting your lower back.",
+                "Engage your core muscles to help stabilize your body in the pose, and relax your neck by keeping your gaze directed toward your chest or slightly upward. Hold the pose for several breaths, breathing deeply and evenly. To release, exhale as you slowly lower your legs back down to the ground, returning to the starting position with your arms by your sides."
+            ],
+            "Warrior Pose": [
+                // Instructions for Warrior Pose
+                "Start in a standing position at the top of your mat with your feet about 3 to 4 feet apart, facing forward.",
+                "Turn your right foot out 90 degrees to the right, so your right heel aligns with the arch of your left foot.",
+                "Inhale as you bend your right knee, sinking your hips down toward the ground, while keeping your left leg straight and strong. Your right knee should be directly above your right ankle, forming a right angle.",
+                "Extend your arms out to the sides at shoulder height, palms facing down. Gaze over your right fingertips. Hold the pose for several breaths, then straighten your right leg and repeat on the other side."
+            ]
+        };
+
+        const images = {
+            "Tree Pose": "../static/Tree.jpg",
+            "Triangle Pose": "../static/Triangle.jpg",
+            "DownDog Pose": "../static/DownDog.jpg",
+            "Chair Pose": "../static/Chair.jpg",
+            "Shoulder Pose": "../static/Shoulder.jpg",
+            "Warrior Pose": "../static/Warrior.jpg"
+        };
+
+        const selectedPose = document.getElementById("selectedPose");
+        console.log(selectedPose.value);
+        const instructionsList = document.getElementById("instructionsList");
+        // console.log(instructionsList);
+        const poseImage = document.getElementById("pose-demo-img");
+
+        // Update instructions and image when option changes
+        selectedPose.addEventListener("change", () => {
+            const pose = selectedPose.value;
+            const poseInstructions = instructions[pose];
+            const poseImageSrc = images[pose];
+            // console.log(poseInstructions);
+            // console.log(poseImageSrc.value);
+            // Update instructions list
+            // instructionsList.innerHTML = "";
+
+            instruction1 = document.getElementById("instruction1");
+            instruction2 = document.getElementById("instruction2");
+            instruction3 = document.getElementById("instruction3");
+            instruction4 = document.getElementById("instruction4");
+
+            console.log("hello", instructions[pose][0]);
+            instruction1.innerHTML = poseInstructions[0];
+            instruction2.innerHTML = poseInstructions[1];
+            instruction3.innerHTML = poseInstructions[2];
+            instruction4.innerHTML = poseInstructions[3];
+            // Update pose image
+            console.log(poseImageSrc)
+            poseImage.src = poseImageSrc;
+        });
+    </script>
+</body>
+
+</html>

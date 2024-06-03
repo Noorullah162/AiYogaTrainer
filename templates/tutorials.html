@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .tutorials-container {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(100deg, #0066ff, #00bfff);
+        }
+
+        .tutorials-heading {
+            font-size: 54px;
+            margin-left: 100px;
+            padding-top: 50px;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .tutorials-content {
+            color: white;
+            font-size: 18px;
+            margin: auto;
+            margin-left: 100px;
+            margin-top: 4px;
+        }
+
+        .tutorials-content-container {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tutorials-container">
+        <h1 class="tutorials-heading">Basic Tutorials</h1>
+        <div class="tutorials-content-container">
+            {% for sentence in tutorialspoints %}
+            <p class="tutorials-content">
+                {{sentence}}</p>
+            {% endfor %}
+        </div>
+        <h1 class="tutorials-heading">Camera Not Working?</h1>
+        <div class="tutorials-content-container">
+            {% for points in fix_camera_points %}
+            <p class="tutorials-content">{{points}}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <script>
+        var tutorials = [
+            '1. When App ask for permission of camera, allow it to access to capture pose.',
+            '2. Select what pose you want to do in the dropdown.',
+            '3. Read Instrctions of that pose so you will know how to do that pose.',
+            '4. Click on Start pose and see the image of the that pose in the right side and replecate that image in front of camera.',
+            '5. If you will do correctly the skeleton over the video will become green in color and sound will start playing'
+        ]
+
+        var fixCamera = [
+            'Solution 1. Make sure you have allowed the permission of camera, if you have denined the permission, go to setting of your browser to allow the access of camera to the application.',
+            'Solution 2. Make sure no any other application is not accessing camera at that time, if yes, close that application',
+            'Solution 3. Try to close all the other opened broswers'
+        ] 
+    </script>
+</body>
+
+</html>

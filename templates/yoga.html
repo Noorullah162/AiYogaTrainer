@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .yoga-container {
+            background: linear-gradient(100deg, #0066ff, #00bfff);
+            min-width: 100vw;
+            min-height: 100vh;
+            /* padding-top: 50px; */
+        }
+
+        .yoga-head {
+            padding-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .back-btn {
+            position: relative;
+            left: 45%;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+            border-color: rgba(125, 125, 125, 0.1);
+            border-width: 5px;
+            /* width: 200px; */
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 0px 0px;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .pose-img {
+            width: 400px;
+            height: auto;
+        }
+
+        .yoga-cam {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #timer {
+            background: #fff;
+            color: #000;
+            width: 80px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yoga-container">
+        <div class="yoga-head">
+            <div class="text">Yoga Pose: {{ pose }}</div>
+            <div class="text">Camera View</div>
+            <div id="timer">
+                00:00
+            </div>
+            <a href="/pose"><button class="back-btn">Back</button></a> <!-- Added class to button -->
+        </div>
+
+        <!-- Display camera details -->
+
+        <!-- You can add more details as needed -->
+        <diV class="yoga-cam">
+            <!-- <img src="{{ url_for('video_feed', posename = pose ) }}" width="50%" height="30%"/> -->
+            <iframe src="{{ url_for('video_feed', posename = pose )}}" width="50%" height="480px" frameborder="0"
+                scrolling="no"></iframe>
+            <!-- {{posename}} -->
+            <img src="../static/{{posename}}.jpg" class="pose-img">
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        var timer;
+        var ele = document.getElementById('timer');
+
+        (function () {
+            var sec = 0;
+            timer = setInterval(() => {
+                ele.innerHTML = '00:' + sec;
+                sec++;
+            }, 1000) // each 1 second
+        })() 
+    </script>
+</body>
+
+</html>
