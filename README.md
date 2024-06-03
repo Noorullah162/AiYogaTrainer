@@ -5,6 +5,7 @@ A web-based application that assists users in performing yoga poses with real-ti
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [System Architecture](#system-architecture)
 - [Features](#features)
 - [Installation](#installation)
 - [Project Structure](#Project-Structure)
@@ -16,6 +17,10 @@ A web-based application that assists users in performing yoga poses with real-ti
 ## Introduction
 
 This project aims to help users practice yoga by providing real-time feedback on their poses. Using a webcam, the application captures the user's movements and utilizes TensorFlow-based pose estimation to analyze the accuracy of the poses. The system provides both visual cues on the video feed and auditory instructions to guide users in adjusting their posture.
+
+## System Architecture
+
+![System Architecture](SystemArichitecture.png)
 
 ## Features
 
