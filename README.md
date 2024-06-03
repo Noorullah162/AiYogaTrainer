@@ -121,7 +121,8 @@ This project aims to help users practice yoga by providing real-time feedback on
 ## Output Video
 
 Here is a demonstration of the application in action:
-[Watch the output video](Output_Ai_Yoga_Trainer.mp4)
+[Watch the output video](https://github.com/your-username/your-repo-name/raw/main/path/to/your/video.mp4)
+
 
 ## Technologies Used
 
