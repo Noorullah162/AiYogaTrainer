@@ -1,4 +1,4 @@
-Yoga Pose Estimation and Feedback System
+# Yoga Pose Estimation and Feedback System
 A web-based application that assists users in performing yoga poses with real-time video processing and feedback using a webcam. This project leverages pose estimation models to analyze user posture and provide corrective guidance through both visual and auditory feedback.
 
 Table of Contents
