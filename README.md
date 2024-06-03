@@ -7,6 +7,7 @@ A web-based application that assists users in performing yoga poses with real-ti
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
+- [Project Structure](#Project-Structure)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
@@ -56,6 +57,11 @@ This project aims to help users practice yoga by providing real-time feedback on
     # Example command to download the model
     wget https://path-to-your-model/movenet_thunder.tflite -P models/
     ```
+
+
+## Project Structure
+
+```plaintext
 📂 yoga-pose-estimation/
 ├── 📂 examples/
 │   └── 📂 utils/
@@ -90,7 +96,7 @@ This project aims to help users practice yoga by providing real-time feedback on
 ├── 📄 teststream.py
 ├── 📄 app.py
 └── 📄 requirements.txt
-
+```
 
 
 ## Usage
