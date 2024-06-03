@@ -56,18 +56,18 @@ This project aims to help users practice yoga by providing real-time feedback on
     # Example command to download the model
     wget https://path-to-your-model/movenet_thunder.tflite -P models/
     ```
-📦 yoga-pose-estimation/
-├── 📁 examples/
-│   └── 📁 utils/
-├── 📁 poses_images_out_test/
+📂 yoga-pose-estimation/
+├── 📂 examples/
+│   └── 📂 utils/
+├── 📂 poses_images_out_test/
 │   └── (Output images of human poses from the test set)
-├── 📁 poses_images_out_train/
+├── 📂 poses_images_out_train/
 │   └── (Output images of human poses from the training set)
-├── 📁 static/
+├── 📂 static/
 │   └── (Contains images for the Flask website)
-├── 📁 templates/
+├── 📂 templates/
 │   └── (Contains HTML and CSS files for the web interface)
-├── 📁 yoga_poses/
+├── 📂 yoga_poses/
 │   └── (Dataset of yoga poses used for training and testing)
 ├── 📄 bend.mp3
 ├── 📄 chair.jpg
@@ -90,6 +90,7 @@ This project aims to help users practice yoga by providing real-time feedback on
 ├── 📄 teststream.py
 ├── 📄 app.py
 └── 📄 requirements.txt
+
 
 
 ## Usage
