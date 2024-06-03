@@ -118,6 +118,11 @@ This project aims to help users practice yoga by providing real-time feedback on
 
 3. Follow the on-screen instructions to select and perform a yoga pose. The system will provide real-time feedback to help you adjust your posture.
 
+## Output Video
+
+Here is a demonstration of the application in action:
+[Watch the output video](Output_Ai_Yoga_Trainer.mp4)
+
 ## Technologies Used
 
 - **Flask**: Web framework for building the application.
