@@ -121,7 +121,7 @@ This project aims to help users practice yoga by providing real-time feedback on
 ## Output Video
 
 Here is a demonstration of the application in action:
-[https://github.com/Noorullah162/AiYogaTrainer/assets/113673268/a95e526f-add3-4113-9065-cbc7673493a9](https://github.com/Noorullah162/AiYogaTrainer/assets/113673268/a95e526f-add3-4113-9065-cbc7673493a9)
+https://github.com/Noorullah162/AiYogaTrainer/assets/113673268/a95e526f-add3-4113-9065-cbc7673493a9
 
 
 ## Technologies Used
