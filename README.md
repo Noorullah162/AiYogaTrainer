@@ -75,6 +75,8 @@ This project aims to help users practice yoga by providing real-time feedback on
 │   └── (Contains HTML and CSS files for the web interface)
 ├── 📂 yoga_poses/
 │   └── (Dataset of yoga poses used for training and testing)
+├── 📄 train_data.csv ( It contains train extracted data from movenet )
+├── 📄 test_data.csv ( It contains test extracted data from movenet )
 ├── 📄 bend.mp3
 ├── 📄 chair.jpg
 ├── 📄 chair.mp3
