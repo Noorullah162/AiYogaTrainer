@@ -8,7 +8,7 @@ A web-based application that assists users in performing yoga poses with real-ti
 - [System Architecture](#system-architecture)
 - [Features](#features)
 - [Installation](#installation)
-- [Project Structure](#Project-Structure)
+- [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
